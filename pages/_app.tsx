@@ -7,7 +7,7 @@ function HomePage() {
   return (
     <React.StrictMode>
       <StyleProvider>
-        <ThemePicker variant='ligth'>
+        <ThemePicker variant="light">
           <HelloWorld />
         </ThemePicker>
       </StyleProvider>
