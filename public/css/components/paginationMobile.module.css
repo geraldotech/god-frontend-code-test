@@ -1,0 +1,23 @@
+.btnWrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: #d5d5d5;
+  border: none;
+  padding: 0;
+}
+.btnSelected {
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: #3c3c3c;
+  border: none;
+  padding: 0;
+}

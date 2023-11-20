@@ -5,9 +5,11 @@ import { CarCard } from './CarCard'
 import { Spacer } from './Spacer'
 import styles from '../../public/css/home.module.css'
 import PaginationDesktop from './PaginationDesktop'
+import PaginationMobile from './PaginationMobile'
 
 export const HomeComponent: React.FC = () => {
   const { cars } = useCars()
+  const [selected, setSelected] = useState(0)
 
   const onClickNavigate = (left: boolean) => {
     let cardList = document.getElementById('card-list')
@@ -19,6 +21,17 @@ export const HomeComponent: React.FC = () => {
     else {
       cardList?.scrollTo({ left: scrollPosition + cardSize })
     }
+  }
+
+  const onClickMobile = (index: number) => {
+    let cardList = document.getElementById('card-list')
+    let card = cardList?.firstElementChild
+    let cardSize = (card?.clientWidth ?? 0) + 24
+    let scrollSize = cardList?.scrollWidth ?? 0
+    let scrollPosition = cardList?.scrollLeft ?? 0
+
+    cardList?.scrollTo({ left: scrollPosition + cardSize * index })
+    setSelected(index)
   }
 
   return (
@@ -33,6 +46,11 @@ export const HomeComponent: React.FC = () => {
       <PaginationDesktop
         onClickLeft={() => onClickNavigate(true)}
         onClickRight={() => onClickNavigate(false)}
+      />
+      <PaginationMobile
+        selected={selected}
+        onClick={onClickMobile}
+        total={cars.length}
       />
     </div>
   )
