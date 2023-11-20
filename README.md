@@ -1,11 +1,15 @@
 # Volvo Cars (Global Online Digital)
 
-### how depoly NextJS on Vercel
+### how deploy NextJS on Vercel
 
 - push project to GitHub
 - new project > import
 - before change `http://localhost:3000/api/cars` to `process.env.NEXT_PUBLIC_API_URL + '/api/cars'`
-- set this Environment Variables in Vercel to project url
+- make deploy
+- Now set this Environment Variables
+  - Name: `NEXT_PUBLIC_API_URL`
+  - Value: `https://random-vercel-url.vercel.app/`
+- Make a redeploy
 
 ## Front-end coding test (React)
 
