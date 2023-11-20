@@ -1,7 +1,7 @@
 import { CardContent, Card, Spacer, Text, Flex, Row, Link } from 'vcc-ui'
 import { Car } from '../types/car.interface'
 import Image from 'next/image'
-import styles from '../../public/css/car.card.module.css'
+import styles from '../../public/css/components/car.card.module.css'
 
 interface CardProps {
   car: Car
@@ -28,7 +28,7 @@ export function CarCard({ car }: CardProps) {
         </Text>
       </Flex>
       <Spacer />
-      <Image src={car.imageUrl} alt={car.modelName} width="200" height="150" />
+      <Image src={car.imageUrl} alt={car.modelName} width="250" height="200" />
       <Spacer />
 
       <Flex
