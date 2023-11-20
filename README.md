@@ -1,5 +1,13 @@
 # Volvo Cars (Global Online Digital)
 
+
+### how depoly NextJS on Vercel
+
+- push project to GitHub
+- new project > import 
+- before change `http://localhost:3000/api/cars` to ``
+
+
 ## Front-end coding test (React)
 
 Our team's designer has come up with a new design to show our latest and greatest recharge cars on the website.
